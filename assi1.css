@@ -3,20 +3,20 @@ body {
     font-family: Arial, sans-serif; 
     margin: 0;
     text-align: center; 
-    background-image: url('C:/xampp/htdocs/CSC574/HTML test/So-Did-T1-Make-It-to-Worlds-2024.png');
+    background-image: url('../So-Did-T1-Make-It-to-Worlds-2024.png');   
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 .first {
-    background-image: url('C:/xampp/htdocs/CSC574/HTML test/1340828.png');
+    background-image: url('../1340828.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
 .last{
-    background-image: url('C:/xampp/htdocs/CSC574/HTML test/1341520.png');
+    background-image: url('../1341520.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
