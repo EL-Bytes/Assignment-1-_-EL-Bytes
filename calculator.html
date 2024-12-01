@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LEL-BYTES. DIGITAL DOMAIN</title>
+        <link rel="stylesheet" href="assi1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<style>
+
+    .miniSub{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: black;
+        font-size: 20px;
+        display: absolute;
+        font-style: italic;
+    }
+
+</style>
+
+<body class="last">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a title="Products">Products <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown">
+
+                    <li><a title="Mouse">Mouse <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="proSuperlight2.html">Pro X Superlight 2</a></li>
+                            <li><a href="attackShark.html">Attack Shark X6</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a title="Keyboard">Keyboard <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="rKludge.html">Royal Kludge M75</a></li>
+                            <li><a href="ducky.html">Ducky One 3 SF</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a title="Monitor">Monitor <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="prism.html">PRISM+</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="calculator.html">Price Calculator</a></li>
+        </ul>
+    </nav>
+
+<h1 class="mini">CALCULATOR</h1>
+<form>
+        <table>
+            <tr>
+                <th>Mouse</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="Mouse" id="mouse">
+                        <option value="None">None</option>
+                        <option value="proSuperlight2">LOGITECH G PRO X SUPERLIGHT 2</option>
+                        <option value="attackShark">ATTACK SHARK X6</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" name="mouseQuantity" id="mouseQuantity" value="1" min="1">
+                </td>
+            </tr>
+            <tr>
+                <th>Keyboard</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="Keyboard" id="Keyboard">
+                        <option value="None">None</option>
+                        <option value="rKludge">ROYAL KLUDGE M75</option>
+                        <option value="ducky">DUCKY ONE SF 3</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" name="keyboardQuantity" id="keyboardQuantity" value="1" min="1">
+                </td>
+            </tr>
+            <tr>
+                <th>Monitor</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="monitor" id="monitor">
+                        <option value="None">None</option>
+                        <option value="prism">PRISM+ X490 PRO</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" name="monitorQuantity" id="monitorQuantity" value="1" min="1">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h8 class="miniSub">Go to each item page (specification) to buy it directly from the official store <br> Noted that *price may be vary for each items</h8>
+                    <div class="popup">
+                        <button type="button" class="button" onclick="openPop()">Checkout</button>
+                        <div class="pop" id="pop">
+                            <img src="C:/xampp/htdocs/CSC574/HTML test/54ebc21e8b4057bf17ecfea7d2715fa3.jpg" alt="Thank You">
+                            <h2>Thank You!</h2>
+                            <p></p>
+                            <button type="button" onclick="closePop()">Close</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</form>
+
+<script>
+    const pop = document.getElementById("pop");
+    const totalPriceElement = document.querySelector("#pop p"); 
+
+    function calculateTotal() 
+    {
+        let sum = 0;
+
+        const mouse = document.getElementById("mouse").value;
+        const mouseQuantity = parseFloat(document.getElementById("mouseQuantity").value);
+
+        const keyboard = document.getElementById("Keyboard").value;
+        const keyboardQuantity = parseFloat(document.getElementById("keyboardQuantity").value);
+
+        const monitor = document.getElementById("monitor").value;
+        const monitorQuantity = parseFloat(document.getElementById("monitorQuantity").value);
+
+        if (mouse === "proSuperlight2") 
+        { 
+            sum += 689 * mouseQuantity;
+        } 
+        else if (mouse === "attackShark") 
+        {
+            sum += 215.49 * mouseQuantity;
+        }
+
+        if (keyboard === "rKludge") 
+        {
+            sum += 452 * keyboardQuantity;
+        } 
+        else if (keyboard === "ducky") 
+        {
+            sum += 459 * keyboardQuantity;
+        }
+
+        if (monitor === "prism") 
+        {
+            sum += 5099 * monitorQuantity;
+        }
+
+        return sum;
+    }
+
+    function openPop() 
+    {
+        const total = calculateTotal();
+        totalPriceElement.textContent = `Your overall price is: RM ${total.toFixed(2)}`;
+        pop.classList.add("open-Pop");
+        document.body.classList.add("popup-open"); 
+    }
+
+    function closePop() 
+    {
+        pop.classList.remove("open-Pop");
+        document.body.classList.remove("popup-open");
+    }
+
+</script>
+
+</body>
+
+</html>

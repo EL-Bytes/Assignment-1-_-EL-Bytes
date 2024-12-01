@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LEL-BYTES. DIGITAL DOMAIN</title>
+        <link rel="stylesheet" href="assi1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<style>
+        
+        h3 {
+            transition: color 0.3s ease;
+            background-color: 0.3s ease;
+            cursor: pointer;
+            width:max-content;
+            margin: auto;           
+        }
+        h3:hover {
+            color: rgb(255, 5, 5); 
+        }
+
+</style>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a title="Products">Products <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown">
+
+                    <li><a title="Mouse">Mouse <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="proSuperlight2.html">Pro X Superlight 2</a></li>
+                            <li><a href="attackShark.html">Attack Shark X6</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a title="Keyboard">Keyboard <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="rKludge.html">Royal Kludge M75</a></li>
+                            <li><a href="ducky.html">Ducky One 3 SF</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a title="Monitor">Monitor <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="prism.html">PRISM+</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="calculator.html">Price Calculator</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="mini">MOUSE</h1>
+            <br>    
+            <br>
+    <video style="width: 800px; height: 430px; object-fit: contain;" autoplay muted controls loop>
+            <source src="C:\xampp\htdocs\CSC574\HTML test\Inside Look .mp4" type="video/mp4" type="video/ogg">
+            Your browser does not support the video tag.
+    </video>
+
+    <br>
+
+    <h3 onmouseover="showPrice(); showHover()" onmouseout="hidePrice(); hideHover()">LOGITECH G PRO X SUPERLIGHT 2</h3>
+
+    <h3 id="price" class="price" style="display: none;">RM689</h3>
+    
+    <script>
+        
+        let msg;
+            msg = 'Hover to LOGITECH PRO SUPERLIGHT 2 to see price';
+            window.alert(msg);
+
+        function showPrice() {
+            const priceElement = document.getElementById('price');
+            priceElement.style.display = 'block'; 
+        }
+    
+        function hidePrice() {
+            const priceElement = document.getElementById('price');
+            priceElement.style.display = 'none'; 
+        }
+    </script>
+
+    <table>
+        <table border="1">
+
+            <tr style="background-color: rgb(0, 0, 0);">
+                <th>SPECIFICATIONS</th>
+            </tr> 
+            
+            <tr>
+                <td>LIGHTSPEED wireless technology</td>
+            </tr>
+
+            <tr>
+                <td>LIGHTFORCE Hybrid Switches</td>
+            </tr>
+     
+            <tr>
+                <td>Resolution: 100 - 44,000 DPI 2</td>
+            </tr>
+     
+            <tr>
+                <td>Zero smoothing/acceleration/filtering</td>
+            </tr>
+     
+            <tr>
+                <td>Max Report Rate: 8000Hz (0.125)</td>
+            </tr>
+
+            <tr>
+                <td>Constant motion: 95 h</td>
+            </tr>
+
+            <tr>
+                <td><a href="https://www.logitechg.com/en-my/products/gaming-mice/pro-x2-superlight-wireless-mouse.910-006632.html" target="_blank">BUY HERE</td>
+            </tr>
+
+        </table>
+    </table>
+
+</body>
+</html>

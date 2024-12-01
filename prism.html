@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LEL-BYTES. DIGITAL DOMAIN</title>
+        <link rel="stylesheet" href="assi1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<style>
+        
+        h3 {
+            transition: color 0.3s ease;
+            background-color: 0.3s ease;
+            cursor: pointer;
+            width:max-content;
+            margin: auto;           
+        }
+        h3:hover {
+            color: rgb(255, 5, 5); 
+        }
+
+</style>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li><a title="Products">Products <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown">
+
+                    <li><a title="Mouse">Mouse <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="proSuperlight2.html">Pro X Superlight 2</a></li>
+                            <li><a href="attackShark.html">Attack Shark X6</a></li>
+                        </ul>
+                    </li>
+            
+                    <li><a title="Keyboard">Keyboard <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="rKludge.html">Royal Kludge M75</a></li>
+                            <li><a href="ducky.html">Ducky One 3 SF</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a title="Monitor">Monitor <i class="fa fa-caret-right"></i></a>
+                        <ul class="dropdown1">
+                            <li><a href="prism.html">PRISM+</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="calculator.html">Price Calculator</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="mini">MONITOR</h1>
+            <br>    
+            <br>
+    <video style="width: 800px; height: 430px; object-fit: contain;" autoplay muted controls loop>
+            <source src="C:\xampp\htdocs\CSC574\HTML test\Oh, That's A BIG ONE... Prism+ X490 PRO Super Ultrawide Monitor.mp4" type="video/mp4" type="video/ogg">
+            Your browser does not support the video tag.
+    </video>
+
+    <br>
+    <h3 onmouseover="showPrice(); showHover()" onmouseout="hidePrice(); hideHover()">PRISM+ X490 PRO<span class="hover"></span></h3>
+
+    <h3 id="price" class="price" style="display: none;">RM5,099</h3>
+
+    <script>
+        
+        let msg;
+            msg = 'Hover to PRISM+ X490 PRO to see price';
+            window.alert(msg);
+
+        function showPrice() {
+            const priceElement = document.getElementById('price');
+            priceElement.style.display = 'block'; 
+        }
+    
+        function hidePrice() {
+            const priceElement = document.getElementById('price');
+            priceElement.style.display = 'none'; 
+        }
+    </script>
+    
+    <table>
+        <table border="1">
+
+            <tr style="background-color: rgb(0, 0, 0);">
+                <th>SPECIFICATIONS</th>
+            </tr> 
+            
+            <tr>
+                <td>49" Super Ultrawide</td>
+            </tr>
+
+            <tr>
+                <td>DQHD 5120 x 1440</td>
+            </tr>
+     
+            <tr>
+                <td>QD-OLED</td>
+            </tr>
+     
+            <tr>
+                <td>240Hz Refresh Rate</td>
+            </tr>
+     
+            <tr>
+                <td>0.03 Response Time</td>
+            </tr>
+
+            <tr>
+                <td>AMD FreeSync Premium</td>
+            </tr>
+
+            <tr>
+                <td><a href="https://prismplus.my/collections/monitors/products/prism-49al-240hz" target="_blank">BUY HERE</td>
+            </tr>
+
+        </table>
+    </table>
+
+</body>
+</html>

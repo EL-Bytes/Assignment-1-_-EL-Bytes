@@ -1,0 +1,263 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    text-align: center; 
+    background-image: url('C:/xampp/htdocs/CSC574/HTML test/So-Did-T1-Make-It-to-Worlds-2024.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.first {
+    background-image: url('C:/xampp/htdocs/CSC574/HTML test/1340828.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.last{
+    background-image: url('C:/xampp/htdocs/CSC574/HTML test/1341520.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+nav {
+    background-color: rgba(44, 41, 41, 0.7);
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2; 
+}
+
+nav li {
+    position: relative;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+ul li {
+    position: relative; 
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+ul li ul.dropdown,
+ul li ul.dropdown1{
+    display: none; 
+    position: absolute; 
+    background: rgba(0, 0, 0, 0.8); 
+    z-index: 999; 
+    width: 200px; 
+    padding: 10px 0; 
+}
+
+ul li:hover > ul.dropdown,
+ul li:hover > ul.dropdown1{
+    display: block; 
+}
+
+ul li ul.dropdown li,
+ul li ul.dropdown1 li{
+    display: block; 
+}
+
+ul li ul.dropdown1{
+    left: 100%; 
+    top: 0; 
+}
+
+nav li:hover .dropdown,
+.dropdown li:hover .dropdown1{
+    display: block;
+}
+
+.dropdown li {
+    margin: 0;
+    padding: 10px;
+}
+
+.dropdown li a {
+    padding: 10px 20px; 
+    color: white;
+}
+
+.dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.dropdown, .dropdown1 {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    z-index: 2; 
+}
+
+table {
+    text-align: center;
+    width: 41%; 
+    margin: 20px auto; 
+    border-collapse: collapse;
+    background-color: rgba(248, 213, 213, 0.9); 
+    box-shadow: 0 4px 10px #000000; 
+
+}
+
+th, td {
+    padding: 10px; 
+    border: 3px solid rgba(233, 23, 23, 0.1); 
+}
+
+th {
+    background-color: #8d4e63;
+    color: white; 
+}
+
+th:hover ,tr:hover {
+    background-color: rgba(32, 35, 255, 0.1); 
+    transition: background-color 0.3s;
+}
+
+.fa {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.header{
+    margin-top: 20px;
+}
+.header , .mini{
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+    display: inline-flex;
+    font-style: italic;
+    font-weight: bold;
+    color:  #8d4e63;
+}
+.mini {
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+    margin: 0; 
+    text-shadow: 5px 0px 0px rgba(255, 255, 255, 0.842);
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color:black ;
+}
+
+h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    color: white;
+    margin: 0; 
+}
+
+div {
+    margin-top: 140px;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -90; 
+    opacity: 0.5;
+}
+.popup{
+    width: 100%;
+    height: -70px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    padding: 10px 60px;
+    background: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-top: -150px;
+}
+.pop {
+    width: 300px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4;
+}
+.open-Pop{
+    visibility: visible;
+    top: 32%;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+.pop img{
+    width: 80%;
+    margin-top: -20px;
+}
+.pop h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.pop button {
+    width: 100%;
+    margin: 0; 
+    padding: 10px 0;
+    background: rgb(34, 33, 124);
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+.price {
+    display: none; 
+    font-weight: bold; 
+    color: rgb(255, 238, 4);
+    -webkit-text-stroke-width:2px;
+    -webkit-text-stroke-color:black ;
+
+}
+.hover{
+    font-size: 20px;
+    margin-top: -30px;
+    }
+    
