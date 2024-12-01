@@ -10,7 +10,7 @@ body {
     background-attachment: fixed;
 }
 .first {
-    background-image: url('/1340828.png');
+    background-image: url('1340828.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
